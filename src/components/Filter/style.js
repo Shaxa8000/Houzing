@@ -11,7 +11,7 @@ const Container = styled.div`
   width: 100%;
   padding: 0 130px;
   gap: 20px;
-//   margin: 10px 0;
+  margin: 10px 0;
 `;
 
 const Icon = styled.div`
