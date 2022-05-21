@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as logoIcon } from '../../assets/icons/logo.svg';
+import { ReactComponent as logoIcon } from '../../assets/icon/logo.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 const NavbarWrapper = styled.div`
   display: flex;
   height: 64px;
-  width: var(--width);
+  max-width: var(--width);
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;

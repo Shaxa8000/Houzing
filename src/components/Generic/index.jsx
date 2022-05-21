@@ -1,12 +1,2 @@
-import React from 'react';
-import { Container } from './style';
-
-const Generic = () => {
-  return (
-      <Container>
-          Generic
-      </Container>
-  )
-}
-
-export default Generic
+export {default as Button} from './Button';
+export {default as Input} from './Input';

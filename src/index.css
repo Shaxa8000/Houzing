@@ -58,7 +58,7 @@ font-family: 'Montserrat';
 }
 
 
-.copy {
+.nocopy {
   -webkit-touch-callout: none; /*iOS Safari*/
   -webkit-user-select: none; /*Safari*/
   -khtml-user-select: none; /*Konqueror HTML*/
