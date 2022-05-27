@@ -65,4 +65,10 @@ font-family: 'Montserrat';
   -moz-user-select: none; /* Old Versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge*/
   user-select: none;
+};
+
+
+.alice-carousel__stage {
+  display: flex;
+  gap: 20px;
 }
