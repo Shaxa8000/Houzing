@@ -2,38 +2,48 @@ import React from 'react';
 import { Container, Icon, Advanced, Section } from './style';
 import { Popover } from 'antd';
 import { Button, Input } from '../Generic';
+import UseReplace from '../../hooks/useReplace';
+import { useNavigate } from 'react-router-dom';
 
 const Filter = () => {
+  const navigate = useNavigate();
+
+  const onChange = ({ target }) => {
+    const { value, name } = target;
+    navigate(`${UseReplace(name, value)}`);
+
+  };
+
 
   const advancedSearch = (
-      <Advanced>
-        <Advanced.Title>Address</Advanced.Title>
-        <Section>
-          <Input placeholder='Country' />
-          <Input placeholder='Region' />
-          <Input placeholder='City' />
-          <Input placeholder='Zip Code' />
-        </Section>
-        <Advanced.Title>Apartment Info</Advanced.Title>
-        <Section>
-          <Input placeholder='Address' />
-          <Input placeholder='House Name' />
-          <Input placeholder='Rooms' />
-        </Section>
-        <Advanced.Title>Price</Advanced.Title>
-        <Section>
-          <Input placeholder='Min Price' />
-          <Input placeholder='Max Price' />
-        </Section>
-        <Section>
-          {/* <Button width={"131px"} ml={20} type={"secondary"}>
+    <Advanced>
+      <Advanced.Title>Address</Advanced.Title>
+      <Section>
+        <Input onChange={onChange} name='country' placeholder='Country' />
+        <Input onChange={onChange} name='region' placeholder='Region' />
+        <Input onChange={onChange} name='city' placeholder='City' />
+        <Input onChange={onChange} name='zip_code' placeholder='Zip Code' />
+      </Section>
+      <Advanced.Title>Apartment Info</Advanced.Title>
+      <Section>
+        <Input onChange={onChange} name='address' placeholder='Address' />
+        <Input onChange={onChange} name='house_name' placeholder='House Name' />
+        <Input onChange={onChange} name='rooms' placeholder='Rooms' />
+      </Section>
+      <Advanced.Title>Price</Advanced.Title>
+      <Section>
+        <Input onChange={onChange} name='min_price' placeholder='Min Price' />
+        <Input onChange={onChange} name='max_price' placeholder='Max Price' />
+      </Section>
+      <Section>
+        {/* <Button width={"131px"} ml={20} type={"secondary"}>
           Search
         </Button> */}
-          <Button width={'131px'} ml={20} type={'primary'}>
-            Search
-          </Button>
-        </Section>
-      </Advanced>
+        <Button width={'131px'} ml={20} type={'primary'}>
+          Search
+        </Button>
+      </Section>
+    </Advanced>
   );
 
 

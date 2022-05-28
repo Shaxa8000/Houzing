@@ -13,6 +13,8 @@ const Input = ({
   mt,
   pl,
   onChange,
+  name,
+  value,
   placeholder,
   defaultValue,
 }) => {
@@ -21,6 +23,7 @@ const Input = ({
       <Icon>{children}</Icon>
       <Container
         defaultValue={defaultValue}
+        name = {name}
         onChange={onChange}
         placeholder={placeholder}
         pl={pl}
@@ -28,6 +31,7 @@ const Input = ({
         width={width}
         height={height}
         onClick={onClick}
+        value={value}
       />
     </Wrapper>
   );
