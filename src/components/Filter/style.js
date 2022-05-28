@@ -14,6 +14,11 @@ const Container = styled.div`
   margin: 10px 0;
 `;
 
+const Wrapper = styled.div`
+display: flex;
+align-items: center;
+`
+
 const Icon = styled.div`
   margin-right: 8px;
 `;
@@ -64,4 +69,4 @@ const Section = styled.div`
   gap: 0 20px;
 `;
 
-export { Container, Icon, Advanced, Section };
+export { Container, Wrapper, Icon, Advanced, Section };

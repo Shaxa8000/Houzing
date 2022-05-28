@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Icon, Advanced, Section } from './style';
+import { Container, Icon, Advanced, Section, Wrapper } from './style';
 import { Popover } from 'antd';
 import { Button, Input } from '../Generic';
 
 const Filter = () => {
 
-    const advancedSearch = (
+  const advancedSearch = (
       <Advanced>
         <Advanced.Title>Address</Advanced.Title>
         <Section>
@@ -34,26 +34,32 @@ const Filter = () => {
           </Button>
         </Section>
       </Advanced>
-    );
+  );
 
 
   return (
-    <Container>
-      <Input
-        pl={50}
-        placeholder={'Enter an address, neighborhood, city, or ZIP code'}
-      >
-        <Icon.Home />
-      </Input>
-      <Popover placement='bottomRight' content={advancedSearch} trigger='click'>
-        <Button width={'131px'} type={'secondary'}>
-          <Icon.Setting /> Advanced
+    <div className='center'>
+      <Container>
+        <Input
+          pl={50}
+          placeholder={'Enter an address, neighborhood, city, or ZIP code'}
+        >
+          <Icon.Home />
+        </Input>
+        <Popover
+          placement='bottomRight'
+          content={advancedSearch}
+          trigger='click'
+        >
+          <Button width={'131px'} type={'secondary'}>
+            <Icon.Setting /> Advanced
+          </Button>
+        </Popover>
+        <Button width={'131px'} type={'primary'}>
+          <Icon.Search /> Search
         </Button>
-      </Popover>
-      <Button width={'131px'} type={'primary'}>
-        <Icon.Search /> Search
-      </Button>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

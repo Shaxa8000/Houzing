@@ -11,11 +11,13 @@ import {
 import noimg from '../../assets/img/noimg.png';
 import nouser from '../../assets/img/nouser.jpg';
 // import { Icon } from "../Filter/style";
+
+
 const Card = ({ info, mr, ml, margin }) => {
   return (
     <Container className='nocopy'>
       {/* 1 */}
-      <Image src={info?.attachment[0]?.imgPath || noimg} alt='house img' />
+      <Image src={info?.attachments[0]?.imgPath || noimg} alt='house img' />
 
       {/* 2 */}
       <InfoWrapper>

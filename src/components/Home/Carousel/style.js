@@ -7,8 +7,8 @@ const CarouselWrapper = styled('div')`
 `;
 
 const MainCarousel = styled(Carousel)`
-  // height: fit-content;
-  height: 570px !important;
+  height: fit-content;
+  // height: 570px !important;
 `;
 
 const Img = styled.img`
