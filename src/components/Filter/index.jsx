@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Icon, Advanced, Section, Wrapper } from './style';
+import { Container, Icon, Advanced, Section } from './style';
 import { Popover } from 'antd';
 import { Button, Input } from '../Generic';
 
