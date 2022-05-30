@@ -20,7 +20,7 @@ const Properties = () => {
     () => fetch(`${url}/v1/houses/list${search || '?'}`).then((res) => res.json()),
     {
       onSuccess: (res) => {
-        setData(res?.dataList[0] || []);
+        setData(res?.data || []);
       },
     }
   );
