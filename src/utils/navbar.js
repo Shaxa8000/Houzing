@@ -1,7 +1,8 @@
 import React from 'react';
+import DetailesPage from '../pages/Details';
 import Generic from '../pages/Generic';
 import Home from '../pages/Home';
-import Properties from '../pages/Properties';
+import PropertiesPage from '../pages/Properties';
 //components
 
 export const navbar = [
@@ -9,7 +10,7 @@ export const navbar = [
     id: 1,
     title: 'Home',
     path: '/home',
-    Element: <Home/>,
+    Element: <Home />,
     search: '?',
     hidden: false,
     private: false,
@@ -18,16 +19,27 @@ export const navbar = [
     id: 2,
     title: 'Properties',
     path: '/properties',
-    Element: <Properties />,
+    Element: <PropertiesPage />,
     search: '?',
     hidden: false,
     private: false,
+  },
+  {
+    id: '2-1',
+    title: 'Properties',
+    path: '/properties/:id',
+    Element: <DetailesPage />,
+    search: '?',
+    hidden: true,
+    private: false,
+    param: true,
   },
   {
     id: 3,
     title: 'Contacts',
     path: '/contacts',
     Element: <Generic />,
+    param: true,
     search: '?',
     hidden: false,
     private: false,
@@ -38,6 +50,7 @@ export const navbar = [
     path: '/signin',
     Element: <Generic />,
     search: '?',
+    param: true,
     hidden: true,
     private: false,
   },

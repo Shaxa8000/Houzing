@@ -9,23 +9,23 @@ import {
   User,
 } from './style';
 import noimg from '../../assets/img/noimg.png';
-import nouser from '../../assets/img/nouser.jpg';
 // import { Icon } from "../Filter/style";
-
-
-const Card = ({ info, mr, ml, margin }) => {
+const Card = ({ info, mr, ml, margin, onClick }) => {
   return (
-    <Container className='nocopy'>
+    <Container className='nocopy' onClick={onClick}>
       {/* 1 */}
       <Image src={info?.attachments[0]?.imgPath || noimg} alt='house img' />
 
       {/* 2 */}
       <InfoWrapper>
         <User>
-          <User.Img src={info?.user || nouser} />
+          <User.Img src={info?.user || noimg} />
         </User>
 
-        <Info.Title>{info?.description || 'description'}</Info.Title>
+        <Info.Title>
+          {info?.description || 'description'} <br /> Category:
+          {info?.category?.name}
+        </Info.Title>
         <Info.Text>
           {info?.name || 'house'},{info?.address || 'Address'},{' '}
           {info?.city || 'City'}
