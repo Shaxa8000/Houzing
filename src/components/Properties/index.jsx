@@ -19,10 +19,12 @@ const Properties = () => {
 
   useEffect(() => {
     if (!query.get('category_id')) {
-      setTitle('Properties')
-}
-    // //eslint-disable-next-line react-hooks/exhoustive-deps
+      setTitle('Properties');
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query.get('category_id')]);
+
   const { isLoading, isRefetching } = useQuery(
     ['getHouses'],
     () =>
