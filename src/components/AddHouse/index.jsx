@@ -227,7 +227,12 @@ const AddHouse = () => {
           />
         </Wrapper>
         <Wrapper>
-          <Input placeholder={'year built'} />
+          <Input
+            value={data?.yearBuilt}
+            name='yearBuilt'
+            placeholder={'year built'}
+            onChange={onChange}
+          />
           <Input placeholder={'home area'} />
           <Input placeholder={'rooms'} />
         </Wrapper>
