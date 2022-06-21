@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import {
   ActiveStyle,
   Container,
@@ -13,10 +13,22 @@ import Button from '../Generic/Button';
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const gotoSignIn = () => {
     navigate('/signin')
   }
+
+  const logOut = () => {
+    localStorage.removeItem('token');
+    
+      if (location?.pathname?.includes('profile')) {
+      navigate('/home')
+      } else {
+        navigate(location.pathname)
+    }
+  }
+
   
   return (
     <Wrapper className='nocopy'>
@@ -38,9 +50,20 @@ export const Navbar = () => {
             })}
           </NavbarBody>
           <Logo>
-            <Button onClick={gotoSignIn} width={'120px'}>
-              Signin
-            </Button>
+            {localStorage.getItem('token') ? (
+              <>
+                <Button mr={20} onClick={()=> navigate('/profile')} width={'131px'}>
+                  Profile
+                </Button>
+                <Button onClick={logOut} width={'131px'}>
+                  Log Out
+                </Button>
+              </>
+            ) : (
+              <Button onClick={gotoSignIn} width={'120px'}>
+                Signin
+              </Button>
+            )}
           </Logo>
         </NavbarWrapper>
       </Container>

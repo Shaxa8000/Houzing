@@ -9,12 +9,14 @@ import {
   User,
 } from './style';
 import noimg from '../../assets/img/noimg.png';
-// import { Icon } from "../Filter/style";
 const Card = ({ info, mr, ml, margin, onClick }) => {
   return (
     <Container className='nocopy' onClick={onClick}>
       {/* 1 */}
-      <Image src={info?.attachments[0]?.imgPath || noimg} alt='house img' />
+      <Image
+        src={info?.attachments && info?.attachments[0]?.imgPath || noimg}
+        alt='house img'
+      />
 
       {/* 2 */}
       <InfoWrapper>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AntCheckbox } from './style';
 
-const Input = ({
+const Checkbox = ({
   children,
   onClick,
   height,
@@ -24,4 +24,4 @@ const Input = ({
   )
 };
 
-export default Input;
+export default Checkbox;

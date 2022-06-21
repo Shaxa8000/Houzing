@@ -56,7 +56,6 @@ const Properties = () => {
     navigate(`/properties/:${id}`);
   };
 
-
   return (
     <>
       <Filter />

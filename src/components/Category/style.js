@@ -30,6 +30,7 @@ const ArrowLeft = styled.div`
   right: 20px;
   transform: translate(-50%, -100%);
   width: 45px;
+  height: 45px;
   color: black;
   background: white;
   opacity: 0.5;
@@ -51,8 +52,9 @@ const ArrowLeft = styled.div`
 
 const ArrowRight = styled(ArrowLeft)`
   left: 50px;
-  transform: translate(50%, 100%);
+  transform: translate(-50%, -100%);
   padding-left: 0;
   padding-right: 10px;
+  margin-left: 20px;
 `;
 export { Container, Cards, ArrowLeft, ArrowRight, Wrapper };

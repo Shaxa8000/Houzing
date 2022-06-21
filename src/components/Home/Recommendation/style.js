@@ -3,8 +3,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 95px;
-  /* padding: 140px; */
-  /* padding: 0 130px !important; */
+  // padding: 140px;
+  // padding: 0 130px !important;
 `;
 
 const Wrapper = styled('div')`
@@ -28,12 +28,14 @@ const ArrowLeft = styled.div`
   text-align: center;
   top: 50%;
   right: 20px;
-  transform: translate(-50%, -100%);
+  opacity: 0.5;
+  transform: translate(-40%, -100%);
   width: 45px;
+  height: 45px;
   color: black;
   background: white;
-  opacity: 0.5;
-  padding-left: 10px;
+  padding: 12px;
+
   box-shadow: 0px 10px 50px rgba(13, 38, 59, 0.1);
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
@@ -42,7 +44,7 @@ const ArrowLeft = styled.div`
   cursor: pointer;
   z-index: 999;
   :hover {
-    opacity: 1;
+    opacity: 0.97;
   }
   :active {
     opacity: 0.7;
@@ -50,9 +52,13 @@ const ArrowLeft = styled.div`
 `;
 
 const ArrowRight = styled(ArrowLeft)`
-  left: 50px;
-  transform: translate(50%, 100%);
-  padding-left: 0;
+  position: absolute;
+  left: 20px;
+  transform: translate(-20%, -100%);
+  padding-left: 10px;
   padding-right: 10px;
-`;
+  margin-left: 40px;
+  `;
+
+
 export { Container, Cards, ArrowLeft, ArrowRight, Wrapper };
