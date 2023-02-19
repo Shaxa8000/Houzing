@@ -14,8 +14,8 @@ const Navbar = () => {
              <Logo/><h3>Houzing</h3>
           </Section>
           <Section>
-            {navbar.map(({title, path, id}) => {
-              return <Link className={({isActive}) => isActive && 'active'} key={id} to={path}>{title}</Link>
+            {navbar.map(({title, path, id}, index) => {
+              return <Link className={({isActive}) => isActive && 'active'} key={index} to={path}>{title}</Link>
             })}
           </Section>
           <Section>
