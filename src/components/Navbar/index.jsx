@@ -26,6 +26,6 @@ const Navbar = () => {
         <Outlet/>
     </Container>
   )
-}
+};
 
 export default Navbar
